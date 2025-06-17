@@ -1,12 +1,13 @@
 from django.test import TestCase
 from . import models
-# Create your tests here.
+# Question 객체 100개 생성
+# 장고 앱 프레임으ㅏㄱㅇ,ㄹ py를 바로 실행할 수 있게
 
-class Make100(TestCase):
-    def test_make_100(self):
-        # Question 객체 100개 생성
-        for i in range(100):
-            models.Question(
-                subject=f'질문 {i}',
-                content =f'질문 내용 {i}').save()
-            # 데이터 베이스에 저장된 Question 객체의 개수 확인
+def main():
+    for i in range(100):
+        models.Question(
+            subject=f'질문 {i}',
+            content =f'질문 내용 {i}').save()
+        
+if __main___ == '__main__':
+    main()
