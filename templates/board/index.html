@@ -1,0 +1,9 @@
+{% if quesion %}
+    <ul>
+        {% for quesion in quesion %}
+        <li><a href= '/board/{{question.id}}'>{{question.subeject}} - {{question.created_at }}</a></li>
+        {% endfor %}
+    </ul>
+    {% if else %}
+        <p>질문이 없습니다.</p>
+    {% endif %}
